@@ -1,0 +1,308 @@
+*{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+}
+img{
+	height: 80%;
+}
+.charting{
+	max-height: 405.56px;
+}
+
+
+.tabsDet{
+	font-size: .75rem;
+
+}
+.viewTrades{
+	font-size: 1rem;
+}
+.mainView{
+	height: 95%;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	padding-right: 0;
+	padding-left: 0;
+	background: #12c2e9;
+	background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+	background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+	border-radius: 4px;
+
+}
+[v-cloak] {
+	display: none;
+}
+.searchBar{
+
+}
+
+#scrollList{
+	
+	margin-right: .25rem;
+	background-color: white;
+	border-radius: 4px;
+	padding:0;
+
+}
+.active2{
+
+}
+.favCoin{
+	width: 26px;
+	font-size: 1rem;
+
+	/*float: right;*/
+	padding: 0;
+}
+.viewingInfo{
+	height: 413.233px;
+	overflow: auto;
+}
+.favName{
+	cursor: pointer;
+}
+.viewingArray{
+	line-height: 0;
+}
+.viewKey{
+	float:left;
+}
+.viewVal{
+	float:right;
+}
+.detView{
+	height: 703.16px;
+	margin: .25;
+	/*overflow: auto;*/
+	/*border-radius: 4px;*/
+	/*float:left;*/
+}
+.tabInd::-webkit-scrollbar{
+	display:none;
+	}
+
+.tblContCoins{
+	/*height: 733px;*/
+}
+
+.detView::-webkit-scrollbar{
+	display:none;
+	}
+
+.displayName{
+	background-color: #12c2e9;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	margin-top:.5rem;
+	margin-bottom:.5rem;
+	height: 150px;
+	border-radius: 4px;
+	
+}
+#navList{
+
+	margin-top: .25rem;
+	
+}
+
+.svgCls2{
+	margin: .25rem;
+}
+.svgCls{
+	width:24px;
+	height: 24px;
+}
+
+.navWhite{
+	background-color: white;
+}
+
+.showThis{
+	display:block;
+}
+
+.hideThis{
+	display:none;
+}
+
+#coins{
+	margin:.5rem;
+	background: #12c2e9;
+	background: -webkit-linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+	background: linear-gradient(to top, #f64f59, #c471ed, #12c2e9);
+	border-radius: 4px;
+
+	height: 668.250px;
+}
+
+.flexA::-webkit-scrollbar{
+	display:none;
+}
+
+.coinsCont{
+	margin:0;
+}
+.exchangesCont{
+	margin:0;
+}
+
+.chartShiz{
+	height:400px;
+	width:400px;
+}
+
+iframe{
+	width: 400px;
+	height: 400px;
+}
+
+canvas{
+	width:400px;
+	height:400px;
+}
+
+.tdCoins{
+
+	cursor: pointer;
+	margin: .25rem;
+	float: left;
+}
+
+
+
+.clickEx{
+	cursor: pointer;
+	padding: 0;
+}
+
+svg{
+	/*margin-top: .5rem;*/
+	float: right;
+}
+
+
+
+.button{
+	height: 24px;
+	width: 24px;
+}
+
+.table {
+	margin-bottom: 0;
+}
+
+.detView{
+
+}
+
+.hovCurse{
+	cursor: pointer;
+}
+
+.startRotate{
+	animation-name: rotateToX;
+	animation-duration: .25s;
+	animation-fill-mode: forwards;
+}
+.unRotate{
+	animation-name: rotateToPlus;
+	animation-duration: .25s;
+	animation-fill-mode: forwards;
+}
+.tabInd{
+	height: 742.25px;
+	overflow: auto;
+}
+.margSe{
+	margin-top: 1rem;
+}
+
+.favName{
+	float:left;
+}
+
+.favStat{
+	float: right;
+}
+
+#following{
+	margin-left: .25rem;
+	padding: 0;
+	margin-right: .25rem;
+	background-color: white;
+	border-radius: 4px;
+}
+#detailedInfo{
+	margin-left: .25rem;
+
+	background-color: white;
+	border-radius: 4px;
+}
+
+.list {
+	margin-top: .5rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
+	height: 84%;
+}
+.logo{
+	margin-left: .5rem;
+	margin-right: .5rem;
+	height: 15%;	
+}
+
+#innerLogo{
+	margin-right: .25rem;
+	background-color: white;
+	border-radius: 4px;
+
+	/*padding:auto;*/
+}
+#innerHeader{
+	background-color: white;
+	border-radius: 4px;
+	margin-left: .25rem;
+	font-family: 'Lobster Two', cursive;
+	font-size: 5rem;
+}
+
+.main{
+	height: 100%;
+	width: 100%;
+}
+.table tr{
+	border-bottom: 1px solid #dee2e6;
+}
+.table2 tr{
+	border-bottom: 1px solid #dee2e6;
+}
+.table td{
+	border: none;
+	padding: 0;
+}
+.clickEx{
+	float: left;
+	margin: .25rem;
+}
+.r1 {
+	height: 100%;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+@keyframes rotateToX {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes rotateToPlus{
+	0% {transform: rotate(45deg);}
+	100% {transform: rotate(0deg);}
+}

@@ -1,0 +1,172 @@
+	<!doctype html>
+		<html lang="en">
+			<head>
+
+			<!-- Required meta tags -->
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+			<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+				<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+				<link href="https://fonts.googleapis.com/css?family=Coustard" rel="stylesheet">
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+				<link rel="stylesheet" href="style.css">
+
+
+				<title>CryptoLog</title>
+				
+			</head>
+
+			<body>
+
+				<div id="app" class="container-fluid main">
+
+					<div class="row justify-content-center r1" id="app">
+
+						<div class="col mainView shadow-lg">
+							
+							<div class="row logo">
+
+								<div class="col-2 shadow text-center font-weight-light" id="innerLogo">Logo</div>
+								<div class="col shadow text-center font-weight-light" id="innerHeader">CryptBook</div>
+
+							</div>
+
+							<div class="row list">
+
+								<div class="col-2 shadow text-center font-weight-light flexA" id="scrollList">
+									<div class="row">
+										<div class="col-12" id="navList">
+											<ul class="nav nav-tabs justify-content-center">
+												<li @click="getCoins" class="nav-item tabsLa">
+													<a class="nav-link">Coins</a>
+												</li>
+												<!-- <li @click="getExch" class="nav-item tabsLa">
+													<a class="nav-link" id="asdf">Exchanges</a>
+												</li> -->
+											</ul>
+										</div>
+									</div>
+									<div class="row coinsCont">
+										<div class="col hideThis" id="coinz">
+												<!-- <div class="col searchBar">
+													<div class="input-group mb-3 margSe">
+														<div class="input-group-prepend">
+															<span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+														</div>
+														<input id="coinSearch" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+													</div>
+												</div> -->
+										</div>
+									</div>
+											<div class="row tabInd">
+												<div class="col tblContCoin">
+													<table class="table tblCoin">
+														
+															<tr @click="getCoinData(coin.Name)" v-for="coin in coins">
+																<td v-cloak class="tdCoins">
+																	{{ coin.FullName }}
+																</td>
+																<!-- <td><button class="btn btn-primary">+</button></td> -->
+															</tr>
+													
+													</table>
+												</div>
+											</div>
+										
+									
+									<!-- <div class="row exchangesCont">
+										<div class="col">
+											<table class="table tdEx">
+												<tr v-for="exch in exchanges">
+													<td class="clickEx">
+														{{ toString(exch) }}
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div> -->
+								</div>
+								<div class="col-3 shadow text-center font-weight-light" id="following">
+									
+										<canvas id="myChart" width="0" height="0"></canvas>
+									
+								</div>
+								
+								<div class="col shadow text-center font-weight-light" id="detailedInfo">
+									<div class="row chartStuff">
+										<div class="col-12">
+											<div class="viewingInfo">
+												<table class="table table-sm">
+													<thead>
+														<tr>
+															<th>Time</th>
+															<th>Close</th>
+															<th>High</th>
+															<th>Low</th>
+															<th>Open</th>
+															<th>Volume From</th>
+															<th>Volume To</th>
+														</tr>
+													</thead>
+
+													<tbody>
+														<tr v-for="key in viewing">
+															<td class="fadeInRed" v-cloak>{{ key.time }}</td>
+															<td class="fadeInRed" v-cloak>${{ key.close }}</td>
+															<td class="fadeInRed" v-cloak>${{ key.high }}</td>
+															<td class="fadeInRed" v-cloak>${{ key.low }}</td>
+															<td class="fadeInRed" v-cloak>${{ key.open }}</td>
+															<td class="fadeInRed" v-cloak>{{ key.volumefrom }}</td>
+															<td class="fadeInRed" v-cloak>{{ key.volumeto }}</td>
+														</tr>
+													</tbody>
+
+												</table>
+											</div>
+										</div>
+										<div class="col charting">
+											
+										</div>
+										
+									</div>
+								
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</body>
+
+			<!-- Optional JavaScript -->
+			<script src="chart.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+			<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+			
+			<script src="moment.js"></script>
+			
+			
+			<script src="data.js" type="module"></script>
+			
+			
+			<script src="main.js" type="module"></script>
+			<script src="api.js" type="module"></script>
+			<script src="index.js" type="module"></script>
+			
+			
+
+		</html>
